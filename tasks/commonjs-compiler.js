@@ -39,6 +39,7 @@ module.exports = function (grunt) {
         ' --output_wrapper="(function(){%output%})();"';
 
     if (options.externs) command += ' --externs="' + options.externs.join('" --externs="') + '"';
+    if (options.define) command += ' --define=\'' + options.define + '\'';
 
     exec(command, {
       cwd      : options.cwd,

@@ -31,6 +31,7 @@ module.exports = function (grunt) {
                 output      : '../build.js',         // output file location
                 externs     : ['externs/jquery.js'], // optional
                 report      : 'build-report.txt'     // optional
+                define      : 'SOME_VAR=true'        // @define, optional
             }
         }
 	});

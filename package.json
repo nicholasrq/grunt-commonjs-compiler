@@ -1,6 +1,6 @@
 {
   "name": "grunt-commonjs-compiler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grunt task for compiling client-side CommonJS modules given the entry module",
   "main": "commonjs-compiler.js",
   "scripts": {
