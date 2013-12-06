@@ -1,6 +1,6 @@
 {
   "name": "grunt-commonjs-compiler",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Grunt task for compiling client-side CommonJS modules given the entry module",
   "main": "commonjs-compiler.js",
   "scripts": {
@@ -11,11 +11,11 @@
     "url": "https://github.com/Indamix/grunt-commonjs-compiler.git"
   },
   "keywords": [
-    "Grunt",
+    "grunt",
     "gruntplugin",
-    "CommonJS",
+    "commonjs",
     "compiler",
-    "Closure Compiler"
+    "closure compiler"
   ],
   "readme": "Builds CommonJS modules dependency tree starting from 'entryModule'. Compiles it using Closure Compiler.",
   "author": {
