@@ -1,6 +1,6 @@
 {
   "name": "grunt-commonjs-compiler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Grunt task for compiling client-side CommonJS modules given the entry module",
   "main": "commonjs-compiler.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-watch": "~0.5.3"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
   }
 }

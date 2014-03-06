@@ -1,5 +1,6 @@
 var exec = require('child_process').exec,
-    fs = require('fs');
+    fs = require('fs'),
+    _ = require('lodash');
 
 module.exports = function (grunt) {
 
@@ -12,8 +13,14 @@ module.exports = function (grunt) {
     output      : 'Specify ' + 'output'.red + ' property (e.g. \'build.js\').'
   };
 
+  var defaults = {
+    compilerPath: '../..',
+    cwd: '/',
+    maxBuffer: 500
+  };
+
   grunt.registerMultiTask('commonjs-compiler', 'Build CommonJS modules tree, compile it', function () {
-    var options = this.data;
+    var options = _.merge(this.options(defaults), this.data);
 
     for (var property in checks) {
       if (!options[property]) {
@@ -21,9 +28,6 @@ module.exports = function (grunt) {
         return false;
       }
     }
-
-    options.cwd = options.cwd || '.';
-    options.maxBuffer = options.maxBuffer || 500;
 
     var output = options.cwd + '/' + options.output;
     grunt.file.write(output, '');

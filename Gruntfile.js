@@ -3,7 +3,6 @@ module.exports = function (grunt) {
     'commonjs-compiler': {
       test: {
         cwd         : 'test/client',
-        compilerPath: '../..',
         entryModule : 'main.js',
         output      : '../build.js',
         externs     : ['externs/file.js'],
