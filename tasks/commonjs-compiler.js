@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         'java -jar "' + options.compilerPath + '/compiler.jar"' +
         ' --js="' + getRequiredModules(options.entryModule, options.cwd).join('" --js="') + '"' +
         ' --js_output_file="' + options.output + '"' +
-        ' --compilation_level=ADVANCED_OPTIMIZATIONS' +
+        ' --compilation_level=' + (options.compilationLevel || 'ADVANCED_OPTIMIZATIONS') +
         ' --process_common_js_modules' +
         ' --common_js_entry_module="' + options.entryModule + '"' +
         ' --output_wrapper="(function(){%output%})();"';
